@@ -32,7 +32,7 @@ plt.show()
 ```
 **Gráfico Geredo Pelo Código Acima**
 <p align="center">
-  <img src="https://github.com/taiaraujo/i2a2_cop30/blob/main/grafico_analise.png" alt="EnemGenius Fluxo" width="500">
+  <img src="https://github.com/taiaraujo/i2a2_cop30/blob/main/tarefa_2/grafico_analise.png" alt="EnemGenius Fluxo" width="500">
 </p>
 
 A análise exploratória inicial revela algumas relações interessantes e potenciais problemas:
@@ -121,7 +121,7 @@ plt.show()
 
 **Gráfico Geredo Pelo Código Acima**
 <p align="center">
-  <img src="https://github.com/taiaraujo/i2a2_cop30/blob/main/grafico_proposta.png" alt="EnemGenius Fluxo" width="500">
+  <img src="https://github.com/taiaraujo/i2a2_cop30/blob/main/tarefa_2/grafico_proposta.png" alt="EnemGenius Fluxo" width="500">
 </p>
 
 *   **d) Contextualização e Proposta:**
