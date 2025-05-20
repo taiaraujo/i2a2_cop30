@@ -30,7 +30,292 @@ sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='coolwarm', fmt=".2f")
 plt.title('Matriz de Correlação das Variáveis')
 plt.show()
 ```
-**Gráfico Geredo Pelo Código Acima**
+
+<caption><b>Primeiras Linhas do Dataset</b></caption>
+<table border="1" class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Comunidade</th>
+      <th>Município</th>
+      <th>Estado</th>
+      <th>Índice de Desmatamento (%)</th>
+      <th>Acesso à Água Potável (%)</th>
+      <th>Cobertura Vegetal (%)</th>
+      <th>Renda Média Mensal (R$)</th>
+      <th>Densidade Populacional (hab/km²)</th>
+      <th>Frequência de Queimadas (ano)</th>
+      <th>Distância de Área Urbana (km)</th>
+      <th>Presença de Escola (Sim/Não)</th>
+      <th>Presença de Unidade de Saúde (Sim/Não)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Comunidade 1</td>
+      <td>SÃO DOMINGOS DO CAPIM</td>
+      <td>Pará</td>
+      <td>25.6</td>
+      <td>86.5</td>
+      <td>22.9</td>
+      <td>2863.0</td>
+      <td>123.2</td>
+      <td>0</td>
+      <td>74.7</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Comunidade 2</td>
+      <td>SALINÓPOLIS</td>
+      <td>Pará</td>
+      <td>12.9</td>
+      <td>99.3</td>
+      <td>21.8</td>
+      <td>799.0</td>
+      <td>120.3</td>
+      <td>11</td>
+      <td>87.3</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Comunidade 3</td>
+      <td>TRACUATEUA</td>
+      <td>Pará</td>
+      <td>81.3</td>
+      <td>58.9</td>
+      <td>64.5</td>
+      <td>1924.0</td>
+      <td>104.8</td>
+      <td>5</td>
+      <td>43.9</td>
+      <td>Não</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Comunidade 4</td>
+      <td>SÃO MIGUEL DO GUAMÁ</td>
+      <td>Pará</td>
+      <td>81.5</td>
+      <td>56.0</td>
+      <td>25.5</td>
+      <td>1715.0</td>
+      <td>42.3</td>
+      <td>0</td>
+      <td>5.3</td>
+      <td>Sim</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Comunidade 5</td>
+      <td>MAGALHÃES BARATA</td>
+      <td>Pará</td>
+      <td>58.8</td>
+      <td>84.3</td>
+      <td>39.4</td>
+      <td>1990.0</td>
+      <td>89.4</td>
+      <td>9</td>
+      <td>17.0</td>
+      <td>Sim</td>
+      <td>Sim</td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+<caption><b>Estatísticas Descritivas</b></caption>
+<table border="1" class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Índice de Desmatamento (%)</th>
+      <th>Acesso à Água Potável (%)</th>
+      <th>Cobertura Vegetal (%)</th>
+      <th>Renda Média Mensal (R$)</th>
+      <th>Densidade Populacional (hab/km²)</th>
+      <th>Frequência de Queimadas (ano)</th>
+      <th>Distância de Área Urbana (km)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>200.000000</td>
+      <td>200.000000</td>
+      <td>200.00000</td>
+      <td>200.000000</td>
+      <td>200.000000</td>
+      <td>200.000000</td>
+      <td>200.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>47.588000</td>
+      <td>67.678000</td>
+      <td>49.45950</td>
+      <td>1614.530000</td>
+      <td>82.469500</td>
+      <td>5.670000</td>
+      <td>50.146500</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>25.011311</td>
+      <td>21.344876</td>
+      <td>23.47915</td>
+      <td>746.032763</td>
+      <td>44.554248</td>
+      <td>3.653469</td>
+      <td>26.716665</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5.400000</td>
+      <td>30.800000</td>
+      <td>11.70000</td>
+      <td>412.000000</td>
+      <td>2.900000</td>
+      <td>0.000000</td>
+      <td>1.900000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>26.000000</td>
+      <td>51.400000</td>
+      <td>27.72500</td>
+      <td>944.750000</td>
+      <td>41.100000</td>
+      <td>2.000000</td>
+      <td>28.400000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>51.050000</td>
+      <td>68.700000</td>
+      <td>47.65000</td>
+      <td>1576.000000</td>
+      <td>89.750000</td>
+      <td>6.000000</td>
+      <td>51.800000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>67.550000</td>
+      <td>86.925000</td>
+      <td>69.40000</td>
+      <td>2195.250000</td>
+      <td>123.125000</td>
+      <td>9.000000</td>
+      <td>68.950000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>89.200000</td>
+      <td>100.000000</td>
+      <td>94.10000</td>
+      <td>2992.000000</td>
+      <td>149.700000</td>
+      <td>11.000000</td>
+      <td>99.300000</td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+<caption><b>Matriz de Correlação</b></caption>
+<table border="1" class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Índice de Desmatamento (%)</th>
+      <th>Acesso à Água Potável (%)</th>
+      <th>Cobertura Vegetal (%)</th>
+      <th>Renda Média Mensal (R$)</th>
+      <th>Densidade Populacional (hab/km²)</th>
+      <th>Frequência de Queimadas (ano)</th>
+      <th>Distância de Área Urbana (km)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Índice de Desmatamento (%)</th>
+      <td>1.000000</td>
+      <td>-0.104926</td>
+      <td>0.021803</td>
+      <td>-0.052257</td>
+      <td>0.055411</td>
+      <td>-0.103270</td>
+      <td>0.052848</td>
+    </tr>
+    <tr>
+      <th>Acesso à Água Potável (%)</th>
+      <td>-0.104926</td>
+      <td>1.000000</td>
+      <td>0.070748</td>
+      <td>-0.019238</td>
+      <td>0.062563</td>
+      <td>-0.117572</td>
+      <td>-0.035149</td>
+    </tr>
+    <tr>
+      <th>Cobertura Vegetal (%)</th>
+      <td>0.021803</td>
+      <td>0.070748</td>
+      <td>1.000000</td>
+      <td>-0.012554</td>
+      <td>0.145006</td>
+      <td>0.116379</td>
+      <td>0.001207</td>
+    </tr>
+    <tr>
+      <th>Renda Média Mensal (R$)</th>
+      <td>-0.052257</td>
+      <td>-0.019238</td>
+      <td>-0.012554</td>
+      <td>1.000000</td>
+      <td>-0.032826</td>
+      <td>-0.059823</td>
+      <td>0.035842</td>
+    </tr>
+    <tr>
+      <th>Densidade Populacional (hab/km²)</th>
+      <td>0.055411</td>
+      <td>0.062563</td>
+      <td>0.145006</td>
+      <td>-0.032826</td>
+      <td>1.000000</td>
+      <td>0.038724</td>
+      <td>0.076578</td>
+    </tr>
+    <tr>
+      <th>Frequência de Queimadas (ano)</th>
+      <td>-0.103270</td>
+      <td>-0.117572</td>
+      <td>0.116379</td>
+      <td>-0.059823</td>
+      <td>0.038724</td>
+      <td>1.000000</td>
+      <td>0.006542</td>
+    </tr>
+    <tr>
+      <th>Distância de Área Urbana (km)</th>
+      <td>0.052848</td>
+      <td>-0.035149</td>
+      <td>0.001207</td>
+      <td>0.035842</td>
+      <td>0.076578</td>
+      <td>0.006542</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+
+**Gráfico Da Matriz de Correlação**
 <p align="center">
   <img src="https://github.com/taiaraujo/i2a2_cop30/blob/main/tarefa_2/grafico_analise.png" alt="EnemGenius Fluxo" width="500">
 </p>
