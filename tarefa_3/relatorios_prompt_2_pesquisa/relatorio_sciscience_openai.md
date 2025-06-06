@@ -1,7 +1,3 @@
-Claro! Abaixo está o relatório reestruturado em **Markdown**, com todas as referências listadas ao final:
-
----
-
 # 📝 Relatório Socioambiental: Escassez de Água Potável no Interior do Pará
 
 ## 📌 Resumo Executivo
